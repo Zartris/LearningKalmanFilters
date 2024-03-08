@@ -1,2 +1,2 @@
-# LearningKalmanFilters
-Learning linear, extended and uncented kalman filter through the course https://www.udemy.com/course/advanced-kalman-filtering-and-sensor-fusion
+# Learning Different Kalman Filters and sensor fusion in CPP
+Welcome to my repository on Advanced Kalman Filters. It is my repository covering the course: [Advanced kalman filtering and sensor fusion](https://www.udemy.com/course/advanced-kalman-filtering-and-sensor-fusion), a course focused on leveraging sensor fusion and Kalman filtering concepts, particularly in the context of autonomous vehicles. This course covers the theory and practical implementation of Kalman filtering methods, including Linear Kalman Filter (LKF), Extended Kalman Filter (EKF), and Unscented Kalman Filter (UKF), alongside advanced sensor fusion techniques.
