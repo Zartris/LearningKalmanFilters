@@ -52,7 +52,7 @@ struct SimulationParams
           time_step(0.1), end_time(120),
           gps_enabled(true), gps_update_rate(1.0), gps_position_noise_std(3), gps_error_probability(0.0), gps_denied_x(0.0), gps_denied_y(0.0), gps_denied_range(-1.0),
           lidar_enabled(false), lidar_id_enabled(true), lidar_update_rate(10.0), lidar_range_noise_std(3), lidar_theta_noise_std(0.02),
-          gyro_enabled(false), gyro_update_rate(10.0), gyro_noise_std(0.001), gyro_bias(0.0),
+          gyro_enabled(true), gyro_update_rate(10.0), gyro_noise_std(0.001), gyro_bias(0.0),
           imu_enabled(false), imu_update_rate(10.0), imu_noise_std(0.001), imu_bias(0.0),
           car_initial_x(0.0), car_initial_y(0.0), car_initial_psi(0.0), car_initial_velocity(5.0)
     {

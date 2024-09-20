@@ -1,3 +1,6 @@
 {
-    "cmake.sourceDirectory": "/home/zartris/code/cpp/LearningKalmanFilters/AKFSF-Simulation-CPP"
+    "cmake.sourceDirectory": "/home/zartris/code/cpp/LearningKalmanFilters/AKFSF-Simulation-CPP",
+    "files.associations": {
+        "cmath": "cpp"
+    }
 }

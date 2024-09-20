@@ -14,7 +14,7 @@
 constexpr bool INIT_ON_FIRST_PREDICTION = false;
 constexpr double INIT_POS_STD = 0; // std::pow(5.0, 2);
 constexpr double INIT_VEL_STD = 0; // std::pow(5.0 / 3, 2);
-constexpr double ACCEL_STD = 0.0;
+constexpr double ACCEL_STD = 0.2;
 constexpr double GPS_POS_STD = 3.0;
 // -------------------------------------------------- //
 
@@ -35,7 +35,7 @@ void KalmanFilter::predictionStep(double dt)
 
         // Assume the initial position is (X,Y) = (0,0) m
         // Assume the initial velocity is 5 m/s at 45 degrees (VX,VY) = (5*cos(45deg),5*sin(45deg)) m/s
-        state << 0, 0, 5 * cos(45.0 / 180.0 * M_PI), 5 * sin(45.0 / 180.0 * M_PI);
+        // state << 0, 0, 5 * cos(45.0 / 180.0 * M_PI), 5 * sin(45.0 / 180.0 * M_PI);
         cov << INIT_POS_STD, 0, 0, 0,
             0, INIT_POS_STD, 0, 0,
             0, 0, INIT_VEL_STD, 0,
