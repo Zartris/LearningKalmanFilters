@@ -91,6 +91,31 @@ void KalmanFilter::predictionStep(double dt)
     }
 }
 
+
+void KalmanFilter::predictionStep(ImuMeasurement imu, double dt)
+{
+    if (isInitialised())
+    {
+        VectorXd state = getState();
+        MatrixXd cov = getCovariance();
+
+        // Implement The Kalman Filter Prediction Step for the system in the
+        // section below.
+        // HINT: Assume the state vector has the form [PX, PY, PSI, V].
+        // HINT: Use the Gyroscope measurement as an input into the prediction step.
+        // HINT: You can use the constants: ACCEL_STD, GYRO_STD
+        // HINT: Use the normaliseState() function to always keep angle values within correct range.
+        // HINT: Do NOT normalise during sigma point calculation!
+        // ----------------------------------------------------------------------- //
+        // ENTER YOUR CODE HERE
+
+        // ----------------------------------------------------------------------- //
+
+        setState(state);
+        setCovariance(cov);
+    }
+}
+
 void KalmanFilter::handleGPSMeasurement(GPSMeasurement meas)
 {
     if (isInitialised())
