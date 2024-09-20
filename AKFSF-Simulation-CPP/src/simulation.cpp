@@ -227,18 +227,20 @@ void Simulation::render(Display &disp)
     std::string gps_string = string_format("GPS: %s (%0.1f Hz)", (m_sim_parameters.gps_enabled ? "ON" : "OFF"), m_sim_parameters.gps_update_rate);
     std::string lidar_string = string_format("LIDAR: %s (%0.1f Hz)", (m_sim_parameters.lidar_enabled ? "ON" : "OFF"), m_sim_parameters.lidar_update_rate);
     std::string gyro_string = string_format("GYRO: %s (%0.1f Hz)", (m_sim_parameters.gyro_enabled ? "ON" : "OFF"), m_sim_parameters.gyro_update_rate);
+    std::string imu_string = string_format("IMU: %s (%0.1f Hz)", (m_sim_parameters.imu_enabled ? "ON" : "OFF"), m_sim_parameters.imu_update_rate);
     disp.drawText_MainFont(profile_string, Vector2(x_offset, y_offset + stride * -1), 1.0, {255, 255, 255});
     disp.drawText_MainFont(time_string, Vector2(x_offset, y_offset + stride * 0), 1.0, {255, 255, 255});
     disp.drawText_MainFont(gps_string, Vector2(x_offset, y_offset + stride * 1), 1.0, {255, 255, 255});
     disp.drawText_MainFont(lidar_string, Vector2(x_offset, y_offset + stride * 2), 1.0, {255, 255, 255});
     disp.drawText_MainFont(gyro_string, Vector2(x_offset, y_offset + stride * 3), 1.0, {255, 255, 255});
+    disp.drawText_MainFont(imu_string, Vector2(x_offset, y_offset + stride * 4), 1.0, {255, 255, 255});
     if (m_is_paused)
     {
-        disp.drawText_MainFont("PAUSED", Vector2(x_offset, y_offset + stride * 4), 1.0, {255, 0, 0});
+        disp.drawText_MainFont("PAUSED", Vector2(x_offset, y_offset + stride * 5), 1.0, {255, 0, 0});
     }
     if (!m_is_running)
     {
-        disp.drawText_MainFont("FINISHED", Vector2(x_offset, y_offset + stride * 5), 1.0, {255, 0, 0});
+        disp.drawText_MainFont("FINISHED", Vector2(x_offset, y_offset + stride * 6), 1.0, {255, 0, 0});
     }
 
     // Vehicle State
